@@ -29,7 +29,14 @@
     alert("User Not Registerd")
    }
    else{
-    
+    if(storedPassword === password){
+        alert("login Successfuly")
+        window.location.href = 'home.html'
+    }
+    else{
+        alert("Invailed Password")
+        return
+    }
    }
     })
 </script>
