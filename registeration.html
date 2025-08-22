@@ -25,6 +25,10 @@
         e.preventDefault()
         var username = document.getElementById("username").value
         var password = document.getElementById("password").value
+        if(localStorage.getItem(username)){
+            alert("This user name already taken , try another one")
+            return 
+        }
         localStorage.setItem(username, password)
         alert("User Register Successfully");
         window.location.href = 'login.html'
