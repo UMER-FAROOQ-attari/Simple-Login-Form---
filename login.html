@@ -7,7 +7,7 @@
 </head>
 <body>
       <h1>Login form</h1>
-    <form action="" id="registerform">
+    <form action="" id="loginform">
         <label for="username">Username</label>
         <input type="text" id="username" required>
         <br>
@@ -19,4 +19,18 @@
     </form>
     
 </body>
+<script>
+    document.getElementById("loginform").addEventListener("submit",function(e){
+   e.preventDefault();
+   var username = document.getElementById("username").value;
+   var password = document.getElementById("password").value;
+   var storedPassword = localStorage.getItem(username) 
+   if(storedPassword === null ){
+    alert("User Not Registerd")
+   }
+   else{
+    
+   }
+    })
+</script>
 </html>
