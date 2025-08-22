@@ -9,15 +9,26 @@
 
 <body>
     <h1>Registertion form</h1>
-    <form action="">
+    <form action="" id="registerform">
         <label for="username">Username</label>
         <input type="text" id="username" required>
         <br>
         <label for="password">Password</label>
         <input type="password" id="password" required>
         <br>
+        <p>Allready have a Account? <a href="./login.html">Login</a></p>
         <button type="submit">Register</button>
     </form>
 </body>
+<script>
+    document.getElementById("registerform").addEventListener("submit", function (e) {
+        e.preventDefault()
+        var username = document.getElementById("username").value
+        var password = document.getElementById("password").value
+        localStorage.setItem(username, password)
+        alert("User Register Successfully");
+        window.location.href = 'login.html'
+    })
+</script>
 
 </html>
